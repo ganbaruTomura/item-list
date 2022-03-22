@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "商品名",
+      "desription": "商品説明",
+      "price": 3500,
+      "img": "src"
+    },
+    {
+      "id": 1,
+      "name": "商品名",
+      "desription": "商品説明",
+      "price": 3500,
+      "img": "src"
+    }
+  ]
+}
