@@ -3,16 +3,58 @@
     {
       "id": 1,
       "name": "商品名",
-      "desription": "商品説明",
+      "description": "商品説明商品説明",
       "price": 3500,
-      "img": "src"
+      "img": "https://tailwindcss.com/img/card-top.jpg"
     },
     {
-      "id": 1,
+      "id": 2,
       "name": "商品名",
-      "desription": "商品説明",
+      "description": "商品説明商品説明",
       "price": 3500,
-      "img": "src"
+      "img": "https://tailwindcss.com/img/card-top.jpg"
+    },
+    {
+      "id": 3,
+      "name": "商品名",
+      "description": "商品説明商品説明",
+      "price": 3500,
+      "img": "https://tailwindcss.com/img/card-top.jpg"
+    },
+    {
+      "id": 4,
+      "name": "商品名",
+      "description": "商品説明商品説明",
+      "price": 3500,
+      "img": "https://tailwindcss.com/img/card-top.jpg"
+    },
+    {
+      "id": 5,
+      "name": "商品名",
+      "description": "商品説明商品説明",
+      "price": 3500,
+      "img": "https://tailwindcss.com/img/card-top.jpg"
+    },
+    {
+      "id": 6,
+      "name": "商品名",
+      "description": "商品説明商品説明",
+      "price": 3500,
+      "img": "https://tailwindcss.com/img/card-top.jpg"
+    },
+    {
+      "id": 7,
+      "name": "商品名",
+      "description": "商品説明商品説明",
+      "price": 3500,
+      "img": "https://tailwindcss.com/img/card-top.jpg"
+    },
+    {
+      "id": 8,
+      "name": "商品名",
+      "description": "商品説明商品説明",
+      "price": 3500,
+      "img": "https://tailwindcss.com/img/card-top.jpg"
     }
   ]
 }
