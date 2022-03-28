@@ -39,6 +39,7 @@ export default defineComponent({
     
     // どうやってたら$routeが参照できるようになるのかわからなかったので妥協案
     // 本当はthis.$route.params['id']で取りたいのにできないよぉぉぉ！
+    // ヒストリーモードにするとhashも取れなくなるからどうしようかなあ
     const url = new URL(window.location)
     const id = url.hash.replace('#/ItemDetail/','')
     // API
