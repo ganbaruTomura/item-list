@@ -1,7 +1,7 @@
 <template>
 <div class="p-10">
-    <!--Card 1-->
-    <div class="lg:flex" style="width: 960px">
+    <div v-show="state.loading" class="text-center text-xl" style="width:960px">Now loading...</div>
+    <div v-show="!state.loading" class="lg:flex" style="width: 960px">
       <div class="h-96 w-96 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://tailwindcss.com/img/card-top.jpg')" title="Mountain">
       </div>
       <div class="pl-24 flex flex-col justify-between leading-normal">
@@ -34,6 +34,7 @@ export default defineComponent({
   setup() {
     const state = reactive({
       items: {},
+      loading: true,
     })
     
     // どうやってたら$routeが参照できるようになるのかわからなかったので妥協案
@@ -44,6 +45,7 @@ export default defineComponent({
     async function getData() {
       await axios.get("http://localhost:3000/items/",{ params: {id}}).then(function (response) {
         state.items = response.data[0]
+        state.loading = false
       }).catch(function (error) {
         console.log(error)
       })

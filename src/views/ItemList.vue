@@ -1,6 +1,7 @@
 <template>
   <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-10 xl:grid-cols-4">
-    <div v-for="item of state.items" :key="item.id">
+    <div v-show="state.loading" class="text-center text-xl" style="width:960px">Now loading...</div>
+    <div v-show="!state.loading" v-for="item of state.items" :key="item.id">
       <Card :data="item" />
     </div>
   </div>
@@ -23,12 +24,14 @@ export default defineComponent({
   setup() {
     const state = reactive({
       items: {},
+      loading: true,
     });
 
     // API
     async function getData() {
       await axios.get("http://localhost:3000/items").then(function (response) {
         state.items = response.data
+        state.loading = false
       }).catch(function (error) {
         console.log(error)
       })
