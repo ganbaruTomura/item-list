@@ -3,9 +3,9 @@
     <div class="container-lg mt-32">
       <div style="width:960px">
         <div class="text-2xl w-full">商品一覧</div>
-        <router-link to="/">トップページ</router-link>
+        トップページ > <router-link to="/">商品一覧</router-link>
       </div>
-      <div class="justify-center flex items-center">
+      <div class="justify-center flex items-center"  style="width: 960px">
         <router-view/>
       </div>
     </div>

@@ -9,6 +9,7 @@
 <script>
 // リストのスタイルを設定するコンポーネント
 // API通信をするコンポーネント
+// Cardコンポーネント作らなくてもよかったが、練習になると思ってわざとやってます
 
 import Card from '@/components/Card.vue'
 import axios from "axios";

@@ -1,21 +1,33 @@
 <template>
-  <div class="max-w-sm w-full lg:max-w-full lg:flex xl:mt-12">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://tailwindcss.com/img/card-top.jpg')" title="Woman holding a mug">
-  </div>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div class="mb-8">
-      <div class="text-gray-900 font-bold text-xl mb-2">{{ state.items.name}}</div>
-      <p class="text-gray-700 text-base">{{ state.items.description }}</p>
+<div class="p-10">
+    <!--Card 1-->
+    <div class="lg:flex" style="width: 960px">
+      <div class="h-96 w-96 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://tailwindcss.com/img/card-top.jpg')" title="Mountain">
+      </div>
+      <div class="pl-24 flex flex-col justify-between leading-normal">
+        <div class="mb-8">
+          <div class="font-bold text-xl mb-2">{{ state.items.name }}</div>
+          <p class="text-base py-12">{{ state.items.description }}</p>
+          <p class="text-base py-12">{{ `¥ ${state.items.price}` }}</p>
+          <button class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded">
+            欲しいものリストに追加
+          </button>
+          <button class="ml-12 bg-blue-300 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">
+            カートに入れる
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
 // 受け取ったpropsを表示
+// ボタンコンポーネントは後で作る
 import axios from "axios";
 import { defineComponent, reactive } from "vue";
 // import router from '../router/index.js'
+
 
 export default defineComponent({
   name: 'detail',
