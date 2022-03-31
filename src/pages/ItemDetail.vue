@@ -26,7 +26,8 @@
 // ボタンコンポーネントは後で作る
 import axios from "axios";
 import { defineComponent, reactive } from "vue";
-// import router from '../router/index.js'
+// import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 
 
 export default defineComponent({
@@ -36,12 +37,9 @@ export default defineComponent({
       items: {},
       loading: true,
     })
-    
-    // どうやってたら$routeが参照できるようになるのかわからなかったので妥協案
-    // 本当はthis.$route.params['id']で取りたいのにできないよぉぉぉ！
-    // ヒストリーモードにするとhashも取れなくなるからどうしようかなあ
-    const url = new URL(window.location)
-    const id = url.hash.replace('#/ItemDetail/','')
+  
+    const route = useRoute()
+    const id = route.params.id
     // API
     async function getData() {
       await axios.get("http://localhost:3000/items/",{ params: {id}}).then(function (response) {
